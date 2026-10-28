@@ -63,7 +63,7 @@ class SentenceGame:
         """
         Offer the user the option to decode the original sentence.
         :param original_sentence: The original sentence to decode.
-        """
+decode_choice = input("Want to decode? (Type Yes or No): ").strip().lower() if decode_choice in ["yes", "no"] else "no"
         decode_choice = input("Want to decode? (Type Yes or No): ").strip().lower()
         if decode_choice == "yes":
             print(original_sentence)
