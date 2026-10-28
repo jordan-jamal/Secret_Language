@@ -57,5 +57,11 @@ class Calculator:
         print(f"The multiplication of {first_integer} and {second_integer} is {Calculator.multiply(first_integer, second_integer)}")
         print(f"The division of {first_integer} and {second_integer} is {Calculator.divide(first_integer, second_integer)}")
 
-if __name__ == '__main__':
+        try:
+            first_integer = Calculator.integer_input("Enter first Integer: ")
+            second_integer = Calculator.integer_input("Enter second Integer: ")
+        except Exception as e:
+            logging.error(f"An error occurred: {e}")
+            print("An error occurred while processing your input.")
+            return
     Calculator.main()
