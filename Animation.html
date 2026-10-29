@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            background-color: black;
+            height: 60vh;
+            width: 80vw;
+        }
+
+        .box1 {
+            background-color: yellow;
+            height: 80px;
+            width: 80px;
+            margin-bottom: 20px;
+            /* animation-name: Anime;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            animation-play-state: paused; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: Anime 4s ease-in-out 1s infinite forwards,
+                Anime1 4s linear 1s infinite;
+        }
+
+        .box2 {
+            background-color: red;
+            height: 80px;
+            width: 80px;
+            animation: Anime 4s ease-in-out 1s infinite forwards,
+                       Anime2 4s linear 1s infinite; 
+        }
+
+        @keyframes Anime {
+            from {
+                background-color: yellow;
+            }
+
+            to {
+                background-color: rgb(133, 187, 52);
+            }
+        }
+
+        @keyframes Anime1 {
+            from {}
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes Anime2 {
+            from {}
+
+            to {
+                transform: rotate3d(1,1,1,360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
